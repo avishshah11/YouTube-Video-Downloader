@@ -14,6 +14,8 @@ then you need to make following changes in extract.py and this file is located i
 cipher_url = [
                 parse_qs(formats[i]["cipher"]) for i, data in enumerate(formats)
             ]
+            
+            
 cipher_url = [
                 parse_qs(formats[i]["signatureCipher"]) for i, data in enumerate(formats)
             ]
