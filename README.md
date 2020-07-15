@@ -11,13 +11,22 @@ If you get any keyerror like this:
 
 KeyError: 'cipher'
 
-then you need to make following changes in extract.py and this file is located in pytube library.
+then you need to make following changes in extract.py by fixing some lines and this file is located in pytube library.
 
 cipher_url = [
                 parse_qs(formats[i]["cipher"]) for i, data in enumerate(formats)
             ]
-            
-            
+
+
+
+To
+
+
 cipher_url = [
                 parse_qs(formats[i]["signatureCipher"]) for i, data in enumerate(formats)
             ]
+            
+            
+Just change cipher to signatureCipher and you are done.
+
+Thanks
